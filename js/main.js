@@ -33,3 +33,7 @@ const getBookValues = () => {
 
   return new Book(title, author, pages, isRead)
 }
+
+function setData() {
+  localStorage.setItem(`myLibrary`, JSON.stringify(myLibrary));
+}
