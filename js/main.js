@@ -107,3 +107,13 @@ const createBookCard = (item) => {
       render();
   }); 
 }
+
+function addBook() {
+  event.preventDefault();
+  newBook = getBookValues(); 
+  myLibrary.push(newBook); 
+  setData();
+  render(); 
+  modalForm.reset();
+  closeModal();
+}
