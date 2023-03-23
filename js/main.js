@@ -37,3 +37,13 @@ const getBookValues = () => {
 function setData() {
   localStorage.setItem(`myLibrary`, JSON.stringify(myLibrary));
 }
+
+function render() {
+  const display = document.querySelector('#books-container');
+  const books = document.querySelectorAll('.book-card');
+  books.forEach(book => display.removeChild(book));
+
+  for (let i = 0; i < myLibrary.length; i++){
+    createBookCard(myLibrary[i]);
+  }
+}
