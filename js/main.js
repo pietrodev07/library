@@ -117,3 +117,15 @@ function addBook() {
   modalForm.reset();
   closeModal();
 }
+
+function getData() {
+  if(!localStorage.myLibrary) {
+      render();
+  } else {
+      let objects = localStorage.getItem('myLibrary');
+      myLibrary = JSON.parse(objects);
+      render();
+  }
+}
+
+getData();
