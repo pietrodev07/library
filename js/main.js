@@ -7,3 +7,10 @@ const overlay = document.querySelector('#overlay');
 
 let myLibrary = [];
 let newBook;
+
+function Book(title, author, pages, isRead) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.isRead = isRead;
+}
