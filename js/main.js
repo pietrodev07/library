@@ -14,3 +14,8 @@ function Book(title, author, pages, isRead) {
   this.pages = pages;
   this.isRead = isRead;
 }
+
+const openModal = () => {
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
