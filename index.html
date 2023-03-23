@@ -22,6 +22,20 @@
     <a href="https://github.com/pietrodev07/library" target="_blank">Site made by pietrodev07 with &#10084;&#65039;</a>
   </footer>  
 
+  <div class="modal" id="modal">
+    <form class="modal-form" id="modal-form">
+      <h3 class="modal-title">Add new book</h3>
+      <input type="text" id="title" class="input" placeholder="Title" required>
+      <input type="text" id="author" class="input" placeholder="Author" required>
+      <input type="number" id="pages" class="input" placeholder="Pages" required max="10000">
+      <div class="isRead">
+        <label for="isRead">Have you read it?</label>
+        <input type="checkbox" name="isRead" id="isRead" class="isRead">
+      </div>
+      <button type="submit" class="btn submit-btn" id="submit-btn">Submit</button>
+    </form>
+  </div>
+
   <script src="js/main.js"></script>
 
 </body>
