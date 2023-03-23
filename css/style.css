@@ -16,10 +16,96 @@ body {
   word-wrap: break-word;
 }
 
+.btn {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input {
+  border-radius: 8px;
+  padding: 7px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #FFFBFB;
+  border: 2px solid #00000029;
+}
+
+.input:focus {
+  outline: 2px solid #00000029;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #FFFBFB;
   padding: 20px 0;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.add-book-btn {
+  background-color: #FFFBFB;
+  border: 2px solid #00000029;
+  margin-top: 30px;
+}
+
+.add-book-btn:hover {
+  background-color: #00000029;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #FFFBFB;
+  border: 2px solid #00000029;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.isReadTrue-btn {
+  background-color: #9FFF9C;
+  border: 2px solid #9FFF9C;
+}
+
+.isReadTrue-btn:hover {
+  filter: brightness(90%);
+}
+
+.isReadFalse-btn {
+  background-color: #ff9c9c;
+  border: 2px solid #ff9c9c;
+}
+
+.isReadFalse-btn:hover {
+  filter: brightness(90%);
+}
+
+.remove-book-btn {
+  background-color: #D9D9DA;
+  border: 2px solid #D9D9DA;
+}
+
+.remove-book-btn:hover {
+  filter: brightness(90%);
 }
