@@ -121,8 +121,46 @@ body {
   padding: 10px;
 }
 
-footer a {
+.footer a {
   text-decoration: none;
   color: #252525;
   font-weight: bold;
+}
+
+.modal {
+  background-color: #F0EEF1;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  border: 2px solid #00000029;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.isRead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.submit-btn {
+  background-color: #9FFF9C;
+  border: 2px solid #9FFF9C;
+  padding: 7px 20px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
 }
