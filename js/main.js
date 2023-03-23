@@ -47,3 +47,63 @@ function render() {
     createBookCard(myLibrary[i]);
   }
 }
+
+const createBookCard = (item) => {
+  const bookCard = document.createElement('div');
+  const title = document.createElement('p');
+  const author = document.createElement('p');
+  const pages = document.createElement('p');
+  const removeBookBtn = document.createElement('button');
+  const isReadBtn = document.createElement('button');
+  
+  bookCard.classList.add('book-card');
+  bookCard.setAttribute('id', myLibrary.indexOf(item));
+  
+  title.textContent = item.title;
+  bookCard.appendChild(title);
+  
+  author.textContent = item.author;
+  bookCard.appendChild(author);
+
+  let pagesText;
+
+  if(item.pages == 1) {
+    pagesText = 'page';
+  } else {
+    pagesText = 'pages';
+  }
+
+  pages.textContent = `${item.pages} ${pagesText}`;
+  bookCard.appendChild(pages);
+  
+  isReadBtn.classList.add('btn')    
+  bookCard.appendChild(isReadBtn);
+  
+  if(item.isRead) {
+    isReadBtn.textContent = 'Read';
+    isReadBtn.classList.add('isReadTrue-btn');
+  }else {
+    isReadBtn.textContent = 'Not Read';
+    isReadBtn.classList.add('isReadFalse-btn');
+  }
+  
+  removeBookBtn.textContent = 'Remove'; 
+  removeBookBtn.classList.add('btn');
+  removeBookBtn.classList.add('remove-book-btn');
+  removeBookBtn.setAttribute('id', 'remove-book-btn');
+  bookCard.appendChild(removeBookBtn);
+  
+  booksContainer.appendChild(bookCard);
+
+  removeBookBtn.addEventListener('click', () => {
+      myLibrary.splice(myLibrary.indexOf(item),1);
+      setData()
+      render();
+  });
+
+  isReadBtn.addEventListener('click', () => { 
+      item.isRead = !item.isRead; 
+      setData(); 
+      render();
+  }); 
+}
