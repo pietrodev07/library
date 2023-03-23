@@ -109,3 +109,20 @@ body {
 .remove-book-btn:hover {
   filter: brightness(90%);
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #252525;
+  font-weight: bold;
+}
