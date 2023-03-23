@@ -129,3 +129,7 @@ function getData() {
 }
 
 getData();
+
+addBookBtn.onclick = openModal;
+modalForm.onsubmit = addBook;
+overlay.onclick = closeModal;
